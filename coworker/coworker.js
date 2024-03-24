@@ -176,10 +176,10 @@ window.onload = () =>{
 // slide animation in page
 var slideImg = document.getElementById("slideImg");
 var images = new Array(
-    "/images/defaultimg1.jpg",
-    "/images/defaultimg2.jpg",
-    "/images/defaultimg3.jpg",
-    "/images/office2.jpg"
+    "../images/defaultimg1.jpg",
+    "../images/defaultimg2.jpg",
+    "../images/defaultimg3.jpg",
+    "../images/office2.jpg"
 );
 var len = images.length;
 var i = 0;
