@@ -43,11 +43,11 @@ signInBtn.onclick = () =>{
   }
   if ((value == "coworker") && (password.value.length > 4)){
     var link = document.getElementById("link");
-    link.setAttribute('href', '/coworker/coworker.html')
+    link.setAttribute('href', 'coworker.html')
   }
   if ((value == "owner") && (password.value.length > 4)){
     var link = document.getElementById("link");
-    link.setAttribute('href', '/owner/headpage.html')
+    link.setAttribute('href', 'headpage.html')
   }
 }
 window.onload = ()=>{
