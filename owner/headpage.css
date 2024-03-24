@@ -1,0 +1,145 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+   color:rgb(255, 255, 255);
+}
+
+.welcome
+{
+  text-align: center;
+  font-size:x-large;
+  display:flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  margin-top:25px;
+  margin-left: 25px;
+  padding:20px;
+  width: 150px;
+  color:white;
+  background-color: rgba(0,0,0,0);
+  border:2px solid white;
+  border-radius: 12px;
+  position:absolute
+ 
+}
+
+.words
+{
+    display:flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.4);
+    top:70px;
+    height:600px;
+    width: 650px;
+    position: relative;
+    border-radius: 12px;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+}
+
+
+h1,h3
+{
+  text-align:center;
+}
+
+h1
+{
+    position: absolute;
+    top:20%;
+    font-size: 60px;
+}
+
+button
+{
+    position: absolute;
+    top:60%;
+    padding: 12px;
+    border-radius: 8px;
+    border:none;
+    left:38%;
+    background-color: #ff8427;
+    color:white;
+    font-weight: bold;
+    transition-duration: .5s;
+  transition-timing-function: linear;
+}
+
+#myVid
+{
+    position:absolute;
+    z-index: -2;
+    object-fit: cover;
+    height: 100vh;
+    width: 100vw;
+    position:fixed;
+    top:0;
+}
+
+button:hover
+
+{
+        background-color: rgba(0,0,0,0);
+        color:rgb(255, 255, 255);
+        border: 2px solid rgb(255, 255, 255);
+}
+
+@media only screen and (max-width: 900px) 
+
+{
+    .words
+    {
+        display:flex;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0,0,0,0.4);
+        height:500px;
+        width: 500px;
+        top: 160px;
+        position: relative;
+        border-radius: 12px;
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
+    }
+
+    button
+{
+    position: absolute;
+    top:60%;
+    padding: 12px;
+    border-radius: 8px;
+    border:none;
+    left:35%;
+    background-color: #ff8427;
+    color:white;
+    font-weight: bold;
+}
+    .welcome
+{
+    font-size: medium;
+  text-align: center;
+  display:flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  margin-top:25px;
+  margin-left: 25px;
+  padding:20px;
+  width: 150px;
+  color:white;
+  background-color: rgba(0,0,0,0);
+  border:2px solid white;
+  border-radius: 12px;
+ 
+}
+}

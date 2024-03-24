@@ -1,0 +1,471 @@
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    /* background-image: linear-gradient(rgba(0,0,50,0.8), rgba(0,0,50,0.8)); */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color:white;
+    color:rgb(12, 9, 5)
+   
+}
+#propertyDiv{
+  /* opacity: 0.5; */
+  /* position: absolute; */
+  /* top: 500px; */
+  margin-left: 5%;
+  margin-top: 1vh;
+  /* background-color: rgba(0,0,50,0.1); */
+  width: 400px;
+  height: 120px;
+  border-radius: 10px;
+  padding: 18px 15px;
+  /* float: left;
+  clear: right; */
+  /* display: flex;
+  flex-direction: ; */
+}
+#propertyDiv p{
+  font-size: small;
+ 
+}
+
+img{
+  object-fit: contain;
+  height: 200px;
+  width: 200px;
+  float: left;
+  margin-right: 10%;
+  /* flex-basis: 40%; */
+  /* clear: left; */
+}
+/* p{
+    color: red;
+    font-size: xx-large;
+} */
+#content{
+    display: initial;
+    z-index: 1;
+    visibility: hidden;
+    /*background: rgba(50,50,50,0.5);*/
+   /* background-color:white;*/
+    border:2px solid gray;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50vh;
+    height: 50vh;
+    padding: 18px 15px;
+    border-radius: 10px;
+    position: fixed;
+}
+
+#Address
+{
+  background-color: aqua;
+}
+
+/*buttons section*/
+#deleteButton,#edit,#workspaceButton
+{
+  padding: 8px;
+  margin:6px;
+  background-color: #ff8427;
+  color:white;
+  border:none;
+  border-radius: 3px;
+}
+#edit
+{
+  position: absolute;
+  top:150px;
+  left:210px;
+}
+
+#deleteButton
+{
+  position: absolute;
+  top:150px;
+  left:270px;
+}
+
+#workspaceButton
+{
+  position: absolute;
+  top:150px;
+  left:350px;
+}
+/*button end*/
+
+
+
+#propertyDiv #output
+{
+
+  height:200px;
+  width:200px;
+  padding:0;
+  padding-top:-20px;
+  margin:0;
+  background-color: blue;
+  float:left;
+  object-fit: cover;
+  
+}
+#Address,.address
+{
+  font-size:medium
+}
+
+
+
+#propertyDiv span, #propertyDiv p
+{
+  background-color:white;
+  font-size:medium;
+  
+}
+
+#propertyDiv span
+{
+  margin-left:4%;
+  
+}
+
+#propertyDiv p
+{
+  padding-top: 5px;
+  border-radius: 6px;
+  padding-left: 20px;
+  margin-left: 40%;
+}
+
+#propertyDiv
+{
+  z-index:0;
+  padding:0;
+  display:inline-block;
+  position:relative;
+  left:0;
+  background-color:white;
+  margin-top: 50px;
+  border-radius:6px;
+  height:200px;
+  width:500px;
+  border:2px solid gray;
+}
+
+#editDiv{
+  display: none;
+  background-color: yellow;
+  position: absolute;
+  z-index: 1;
+  top: 20%;
+  left: 30%;
+  width: 50vh;
+  height: 52vh;
+  background-color:white;
+  border: 2px solid gray;
+  padding: 18px 15px;
+  border-radius: 10px;
+
+    /*top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50vh;
+    height: 50vh;
+    padding: 18px 15px;
+    border-radius: 10px;
+    position: fixed;*/
+}
+
+#editDiv label, #editDiv p
+{
+  padding: 5px;
+}
+#editDiv input
+{
+  margin: 10px 10px;
+  padding: 5px;
+  background-color:white;
+  border: 1px solid gray;
+  border-radius:2px;
+}
+
+#editDiv .doneCancelBtn
+{
+  display: flex;
+ flex-direction: row;
+ justify-content: space-around;
+ margin-top: 10px;
+ background-color:white;
+}
+#editDiv button
+{
+  flex-basis: 48%;
+  padding:3px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border:none;
+  border-radius: 2px;
+  background-color: #ff8427;
+  color:white;
+}
+
+h1{
+  text-align: center;
+  padding-top: 12px;
+}
+
+
+
+
+/*Property content Section*/
+#content label,#content p{
+  background-color:white;
+}
+#content input{
+  margin: 10px 10px;
+  padding: 5px;
+  background-color:white;
+  border: 1px solid gray;
+  border-radius:2px;
+}
+#content #okCancelButtons{
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+margin-top: 10px;
+background-color:white;
+}
+#content #okCancelButtons button{
+  flex-basis: 48%;
+  padding:3px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border:none;
+  border-radius: 2px;
+  background-color: #ff8427;
+  color:white;
+}
+#addAProperty{
+  text-align: center;
+  /*background-color: rgba(50,50,50,0.5);*/
+  width: 50%;
+  /*height: 5%;
+  padding: 18px 15px;*/
+  border-radius: 10px;
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#addAProperty p{
+  margin-top: -10px;
+}
+#add{
+  padding: 8px;
+  margin-top: 10px;
+  font-size:medium;
+  border:none;
+  border-radius: 3px;
+  background-color:#ff8427;
+  color:white;
+
+}
+#deleteButton{
+  margin-left: 10px;
+}
+
+
+
+
+/*Workspace content section*/
+#workspaceContent
+{
+  
+  position: absolute;
+  display: flex;
+  top: 15%;
+  /* right: 10%; */
+  justify-content: space-around;
+  background-color: #725a7a;
+}
+#workspaceContent h2{
+  flex-basis: 30%;
+} 
+#workspaceContent #workspacesTitle{
+  
+  position: relative;
+  margin-right: -100vw;
+
+}
+#workspaceDiv, #editWorkspaceDiv{
+  /* display: initial; */
+  z-index:1;
+  visibility: hidden;
+  background: white;
+  border:2px solid gray;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50vh;
+  height: 60vh;
+  padding: 18px 15px;
+  border-radius: 10px;
+  position: fixed;
+}
+#workspaceDiv input{
+  margin: 10px 10px;
+  padding: 5px;
+  border: 1px solid gray;
+}
+
+/* data of workspace */
+#workspaceDataDiv{
+  /* margin-left: 60%; */
+ 
+  margin-top: 5vh;
+  background-color: rgba(0,0,50,0.1);
+  width: 400px;
+  height: 150px;
+  border-radius: 10px;
+  padding: 18px 15px;
+  /* float: right;
+  clear: left; */
+}
+
+#workspaceButtons
+{
+  display: flex;
+flex-direction: row;
+justify-content: space-around;
+margin-top: 10px;
+background-color:white;
+
+}
+
+#workspaceButtons Button
+{
+  flex-basis: 48%;
+  padding:3px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border:none;
+  border-radius: 2px;
+  background-color: #ff8427;
+  color:white;
+}
+
+/* workspace and properties are divided into columns(col1 and col2) */
+#columns{
+  display: flex;
+  margin-top: 6%;
+  margin-left: 10%;
+}
+.column1, .column2{
+  flex: 1;
+  margin: 10px;
+
+}
+.column1{
+  margin-right: 20px;
+}
+.workSpaceCopiedFromProperty{
+  display: none;
+ 
+}
+
+#workspaceDataDiv
+{
+  padding:0;
+  display:inline-block;
+  position:relative;
+  left:0;
+  background-color:white;
+  margin-top: 50px;
+  border-radius:6px;
+  height:200px;
+  width:500px;
+  border:2px solid gray;
+}
+#workspaceDataDiv #output
+{
+  object-fit: cover;
+  margin-top: -38px;
+  
+}
+#workspaceDataDiv p
+{
+  display:block;
+  
+  margin-left: 43%;
+}
+#workspaceDataDiv #editWorkspace, #workspaceDataDiv #deleteWorkspace
+{
+  padding: 8px;
+  margin:6px;
+  background-color: #ff8427;
+  color:white;
+  border:none;
+  border-radius: 3px;
+}
+#workspaceDataDiv #editWorkspace
+{
+  position: absolute;
+  top:150px;
+  left:210px;
+}
+#workspaceDataDiv #deleteWorkspace
+{
+  position: absolute;
+  top:150px;
+  left:290px;
+}
+
+#editWorkspaceDiv input
+{
+  margin: 10px 10px;
+  padding: 5px;
+  border: 1px solid gray;
+}
+
+/*final effects*/
+#add:hover,
+#workspaceDataDiv #deleteWorkspace:hover,
+#workspaceDataDiv #editWorkspace:hover,
+#workspaceButtons Button:hover,
+#content #okCancelButtons button:hover,
+#deleteButton:hover,
+#edit:hover,
+#workspaceButton:hover,
+#editDiv button:hover
+{
+  background-color: #ffffff;
+  color:black;
+  border: 2px solid black;
+}
+
+#add:active
+#workspaceDataDiv #deleteWorkspace:active,
+#workspaceDataDiv #editWorkspace:active,
+#workspaceButtons Button:active,
+#content #okCancelButtons button:active,
+#deleteButton:active,
+#edit:active,
+#workspaceButton:active,
+#editDiv button:active
+{
+  background-color: #974100;
+  color:white;
+}

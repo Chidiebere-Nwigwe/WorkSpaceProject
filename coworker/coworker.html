@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coworker</title>
+    <link rel="stylesheet" href="coworker.css">
+    <script src="https://kit.fontawesome.com/b4df3df2da.js" crossorigin="anonymous"></script>
+</head>
+<body onload="slider()">
+    <div class="banner">
+        <div class="slider">
+            <img src="/images/defaultimg1.jpg" alt="" id="slideImg">
+
+        </div>
+        <div class="overlay">
+            <div class="navbar">
+                <div class="logo">
+                    <h1>Welcome Coworker</h1>
+                </div>
+                <div class="menu-icons">
+                    <i class="fa-solid fa-user"></i>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+
+            </div>
+            <div class="navbarContent">
+                <h1>Check Out Properties Listed</h1>
+                <h3>Buy or Rent WorkSpaces</h3>
+
+                <div>
+                   <a href="#header"><button type="button"> Go To WorkSpaces</button></a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header" id="header">
+        <div class="topnav">
+            <div class="select" id="select">
+                <select name="SearchBy" id="SearchBy">
+                    <option value="selected" selected>Select A Search By Option</option>
+                    <option value="WorkSpace">WorkSpace</option>
+                    <option value="Address">Address</option>
+                    <option value="Neighbourhood">Neighbourhood</option>
+                    <option value="SquareFeet">SquareFeet</option>
+                    <option value="Individual Seats">Individual Seats</option>
+                    <option value="Availability Date">Availability Date</option>
+                    <option value="Lease Term">Lease Term</option>
+                    <option value="Price">Price</option>
+                    <option value="Smoking">Smoking</option>
+                    <option value="Transportation">Reachable By Public Transit ?</option>
+                    <option value="Garage">Has Parking ?</option>
+                </select>
+            </div>
+            <div class="sort">
+                <select name="Sort By" id="sortBy">
+                    <option value="sortBy">Sort By</option>
+                    <option value="Price">Price</option>
+                    <option value="Date">Date</option>
+                </select>
+            </div>
+            <div class="resetDiv">
+                <button id="reset">Reset</button>
+            </div>
+            <div class="date" id="date">
+                <input type="date" id="dateValue">
+            </div>
+            <div class="yesOrNo" id="yesOrNo">
+                <input type="radio" name="yesOrNo" id="yes" value="Yes">
+                <label for="yes" id="LabelForYes">Yes</label>
+                <input type="radio" name="yesOrNo" id="no" value="No">
+                <label for="no" id="LabelForNo">No</label>
+            </div>
+            <div class="search-container" id="search-container">
+                <form action="">
+                    
+                  <input type="search" placeholder="Search.." name="search" id="myInput" onfocus="this.value=''">
+                  <i class="fa fa-search icon" for="myInput"></i>
+                  
+                </form>
+              </div>
+        
+         
+          </div>
+    </div>
+
+    <div class="contentDiv" id="contentDiv">
+        <div class="content" id="content">
+            
+        </div>
+    </div>
+
+    <div class="display" id="display">
+        <h1>details</h1>
+       
+    </div>
+    <footer>
+        <div class="footerDetails">
+            <div class="ii">
+                <p><i class="fa-brands fa-facebook"></i></p>
+                <p><i class="fa-brands fa-instagram"></i></p>
+                <p><i class="fa-brands fa-linkedin"></i></p>
+                <p><i class="fa-brands fa-whatsapp"></i></p>
+
+            </div>
+            <div class="ii_2">
+                <p> <a href="tel: 8257477260"><i class="fa-solid fa-phone"></i> (825) 747-7260</a> </p>
+                <p> <a href="mailto: chidonnwigz@gmail.com"><i class="fa-solid fa-envelope"></i> chidonnwigz@gmail.com</a> </p>
+                
+            </div>
+            <p>Copyrgiht <i class="fa-solid fa-copyright"></i> 2024</p>
+
+        </div>
+    </footer>
+
+    <script src="coworker.js"></script>
+</body>
+</html>

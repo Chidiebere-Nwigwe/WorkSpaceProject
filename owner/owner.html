@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Owner Page</title>
+
+    <script
+    class="jsbin"
+    src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"
+  ></script>
+  <script
+    class="jsbin"
+    src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"
+  ></script>
+
+
+    <script src="https://kit.fontawesome.com/b4df3df2da.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="owner.css">
+</head>
+<body id="body">
+        <h1>Welcome Owner</h1>
+        <div id="addAProperty">
+          <!--<p>Want to Add Property</p>-->
+          <button type="button" id="add">Add property</button>
+        </div>
+
+        <!-- property div -->
+    <div id="content">
+        <label for="file">Image of property</label>
+      
+        <input type="file"  accept="image/jpeg, image/png, image/jpg" name="image" id="file" class="file" >
+
+        <!-- <input type="file"id="image"> -->
+        <br>
+        <label for="address">Address:</label>
+        <input type="text" placeholder="address" name="" id="address">
+        <br>
+        <label for="neighbourhood">Neighbourhood:</label>
+        <input type="text" placeholder="neighbourhood" id="neighbourhood">
+        <br>
+        <label for="squareFeet">SquareFeet:</label>
+        <input type="text" placeholder="square_feet" name="" id="squareFeet">
+        <br>
+        <p>Is there a garage?</p>
+       
+        <input type="radio" id="yes" name="garage" value="Yes">
+        <label for="yes">Yes</label>
+     
+        <input type="radio" id="no" name="garage" value="No">
+        <label for="no">No</label>
+        <p>Reachable by public transportation?</p>
+        
+        <input type="radio" id="true" name="transportation" value="Available">
+        <label for="true">True</label>
+       
+        <input type="radio" id="false" name="transportation" value="Unavailable">
+        <label for="false">False</label>
+        <br>
+        <div id="okCancelButtons">
+          <button onclick="showData()" id="ok">Add</button>
+          <button onclick="cancelAddProperty()" id="cancel">Cancel</button>
+        </div>
+        
+    </div>
+
+
+    
+
+     <!-- edit Property Div -->
+    <div class="editDiv" id="editDiv">
+      <label for="editImage">Image of property</label>
+      <input type="file"  accept="image/jpeg, image/png, image/jpg" name="image" id="editImage" class="editImage" >
+      <br>
+
+      <label for="editAddress">Address:</label>
+      <input type="text" id="editAddress">
+      <br>
+
+      <label for="editNeighbourhood">Neighbourhood:</label>
+      <input type="text" id="editNeighbourhood">
+      <br>
+
+      <label for="editSquareFeet">SquareFeet:</label>
+      <input type="text" id="editSquareFeet">
+      <br>
+
+      <p>Is there a garage?</p>
+      <input type="radio" id="editYes" name="editGarage" value="Yes">
+      <label for="editYes">Yes</label>
+      <input type="radio" id="editNo" name="editGarage" value="No">
+      <label for="editNo">No</label>
+      <br>
+      <p>Reachable by public transportation?</p>
+        
+      <input type="radio" id="editTrue" name="editTransportation" value="Available">
+      <label for="editTrue">True</label>
+     
+      <input type="radio" id="editFalse" name="editTransportation" value="Unavailable">
+      <label for="editFalse">False</label>
+      <br>
+      <div class="doneCancelBtn">
+      <button id="editDone">Done</button>
+      <button id="editCancel" onclick="cancelEditProperty()">Cancel</button>
+      </div>
+
+
+    </div>
+
+    <div class="workspaceContent" id="workspaceContent">
+      <h2 id="propertiesTitle">Properties</h1>
+      <h2 id="workspacesTitle">Workspaces</h1>
+    </div>
+
+<!-- 
+     workspace div -->
+    <div class="workspaceDiv" id="workspaceDiv">
+      <label for="workspaceImage">Image of workspace</label>
+      
+      <input type="file"  accept="image/jpeg, image/png, image/jpg" name="image" id="workspaceImage" class="workspaceImage" >
+      <br>
+      <label for="">Type of workspace:</label>
+      <select name="workspaceDivSelect" id="workspaceDivSelect">
+        <option value="Select Workspace" selected >Select Workspace</option>
+        <option value="Meeting Room">Meeting Room</option>
+        <option value="Private Office Room">Private Office Room</option>
+        <option value="Open Work Area">Open Work Area</option>
+      </select> 
+      <br>
+      <label for="seat">How many Individuals can this space seat?</label>
+      <input type="text" id="seat">
+      <br>
+      <p>Is Smoking Allowed?</p>
+      <input type="radio" id="smoking_Yes" name="smoking" value="yes">
+      <label for="smoking_Yes">Yes</label>
+      <input type="radio" id="smoking_No" name="smoking" value="no">
+      <label for="smoking_No">No</label>
+      <br>
+      <label for="availabilityDate">Availability Date:</label>
+      <input type="date" name="" id="availabilityDate">
+      <br>
+      <label for="leaseTerm">Lease Term:</label>
+      <input type="text" id="leaseTerm">
+      <br>
+      <label for="contact">Contact:</label>
+      <input type="text" id="contact">
+      <br>
+      <label for="price">Price:</label>
+      <input type="text" id="price">
+
+      <div class="workSpaceCopiedFromProperty" id="workSpaceCopiedFromProperty">
+        <br>
+        <label for="workspaceAddress">Address:</label>
+        <input type="text" id="workspaceAddress">
+        <br>
+        <label for="workspaceNeighbourhood">Neighbourhood:</label>
+        <input type="text" id="workspaceNeighbourhood">
+
+        <br>
+        <label for="workspaceSquareFeet">SquareFeet:</label>
+        <input type="text" id="workspaceSquareFeet">
+        <br>
+        <label for="workspaceGarage">Garage:</label>
+        <input type="text" id="workspaceGarage">
+        <br>
+        <label for="workspaceTransportation">Transportation:</label>
+        <input type="text" id="workspaceTransportation">
+
+      </div>
+
+      
+
+      <div id="workspaceButtons">
+        <button onclick="showWorkspaceData()" id="ok">Add</button>
+        <button onclick="cancelshowWorkspaceData()" id="cancel">Cancel</button>
+      </div>
+    </div>
+<!-- 
+     edit workspace div -->
+     <div class="editWorkspaceDiv" id="editWorkspaceDiv">
+      
+      <label for="editWorkspaceImage">Image of workspace</label>
+      
+      <input type="file"  accept="image/jpeg, image/png, image/jpg" name="image" id="editWorkspaceImage" class="editWorkspaceImage" >
+      <br>
+      <label for="">Type of workspace:</label>
+      <select name="editWorkspaceDivSelect" id="editWorkspaceDivSelect">
+        <option value="Select Workspace" selected >Select Workspace</option>
+        <option value="Meeting Room">Meeting Room</option>
+        <option value="Private Office Room">Private Office Room</option>
+        <option value="Open Work Area">Open Work Area</option>
+      </select> 
+      <br>
+      <label for="editSeat">How many Individuals can this space seat?</label>
+      <input type="text" id="editSeat">
+      <br>
+      <p>Is Smoking Allowed?</p>
+      <input type="radio" id="edit_smoking_Yes" name="editSmoking" value="yes">
+      <label for="edit_smoking_Yes">Yes</label>
+      <input type="radio" id="edit_smoking_No" name="editSmoking" value="no">
+      <label for="edit_smoking_No">No</label>
+      <br>
+      <label for="editAvailabilityDate">Availability Date:</label>
+      <input type="date" name="" id="editAvailabilityDate">
+      <br>
+      <label for="editLeaseTerm">Lease Term:</label>
+      <input type="text" id="editLeaseTerm">
+      <br>
+      <label for="editContact">Contact:</label>
+      <input type="text" id="editContact">
+      <br>
+      <label for="editPrice">Price:</label>
+      <input type="text" id="editPrice">
+      <div id="workspaceButtons">
+        <button id="editWorkSpaceOk">Ok</button>
+        <button id="editWorkSpaceCancel" onclick="cancelEditWorkspaceProperty()">Cancel</button>
+      </div>
+    </div>
+
+
+
+    <div class="flex-parent-element" id="columns">
+     <div class="column1" id="column1"></div>
+     <div class="column2" id="column2"></div>
+
+    </div>
+  
+    <script src="owner.js"></script>
+</body>
+</html>
