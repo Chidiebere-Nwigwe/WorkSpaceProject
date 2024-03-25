@@ -20,20 +20,12 @@ section {
    
 }
 #propertyDiv{
-  /* opacity: 0.5; */
-  /* position: absolute; */
-  /* top: 500px; */
   margin-left: 5%;
   margin-top: 1vh;
-  /* background-color: rgba(0,0,50,0.1); */
   width: 400px;
   height: 120px;
   border-radius: 10px;
   padding: 18px 15px;
-  /* float: left;
-  clear: right; */
-  /* display: flex;
-  flex-direction: ; */
 }
 #propertyDiv p{
   font-size: small;
@@ -46,19 +38,11 @@ img{
   width: 200px;
   float: left;
   margin-right: 10%;
-  /* flex-basis: 40%; */
-  /* clear: left; */
 }
-/* p{
-    color: red;
-    font-size: xx-large;
-} */
 #content{
     display: initial;
     z-index: 1;
     visibility: hidden;
-    /*background: rgba(50,50,50,0.5);*/
-   /* background-color:white;*/
     border:2px solid gray;
     top: 50%;
     left: 50%;
@@ -178,15 +162,6 @@ img{
   border: 2px solid gray;
   padding: 18px 15px;
   border-radius: 10px;
-
-    /*top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 50vh;
-    height: 50vh;
-    padding: 18px 15px;
-    border-radius: 10px;
-    position: fixed;*/
 }
 
 #editDiv label, #editDiv p

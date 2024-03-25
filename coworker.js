@@ -176,10 +176,10 @@ window.onload = () =>{
 // slide animation in page
 var slideImg = document.getElementById("slideImg");
 var images = new Array(
-    "../images/defaultimg1.jpg",
-    "../images/defaultimg2.jpg",
-    "../images/defaultimg3.jpg",
-    "../images/office2.jpg"
+    "./images/defaultimg1.jpg",
+    "./images/defaultimg2.jpg",
+    "./images/defaultimg3.jpg",
+    "./images/office2.jpg"
 );
 var len = images.length;
 var i = 0;
@@ -278,7 +278,7 @@ for(let i = 0; i < property.length; i++){
 
         let img = document.createElement("img");
 
-        img.src =  property[i].image;
+        img.src =  "." + property[i].image;
         pp1.innerHTML = "Address: " + property[i].address;
         pp2.innerHTML = "Neighbouhood: " + property[i].neighbourhood;
         pp3.innerHTML = "SquareFeet: " + property[i].squareFeet;
