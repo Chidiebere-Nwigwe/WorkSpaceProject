@@ -19,6 +19,7 @@ signUpLink.addEventListener("click", () => {
   nameField.style.margin = "25px 0";
   signInBtn.innerHTML ="Sign Up";
   formcontainer.style.height = "65vh";
+  register();
 })
 
 signInLink.onclick = () =>{
@@ -49,6 +50,8 @@ signInBtn.onclick = () =>{
     var link = document.getElementById("link");
     link.setAttribute('href', 'headpage.html')
   }
+
+  login();
 }
 window.onload = ()=>{
   resetRadio();
@@ -63,3 +66,57 @@ function resetRadio(){
   }
 
 }
+
+
+
+//connect backend to frontend for authorization
+//for registration
+const register = async (userData) => {
+  try {
+    const response = await fetch('http://localhost:3000/register', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(userData),
+    });
+
+    if (!response.ok) {
+      // Handle non-2xx status codes
+      const errorData = await response.json();
+      throw new Error(errorData.message || 'Registration failed');
+    }
+
+    const data = await response.json();
+    console.log(data); // Assuming the backend returns some data upon successful registration
+  } catch (error) {
+    // Handle network errors or exceptions
+    console.error('Registration failed:', error.message);
+  }
+};
+
+
+//for login
+const login = async (credentials) => {
+  try {
+    const response = await fetch('http://localhost:3000/userLogin', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(credentials),
+    });
+
+    if (!response.ok) {
+      // Handle non-2xx status codes
+      const errorData = await response.json();
+      throw new Error(errorData.message || 'Login failed');
+    }
+
+    const data = await response.json();
+    console.log(data); // Assuming the backend returns a JWT token
+  } catch (error) {
+    // Handle network errors or exceptions
+    console.error('Login failed:', error.message);
+  }
+};
