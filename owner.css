@@ -19,6 +19,21 @@ section {
     color:rgb(12, 9, 5)
    
 }
+.logout{
+  position: absolute;
+  top: 0%;
+  right: 0%;
+}
+.logout button{
+  padding: 12px;
+  margin: 6px;
+  background-color: #ff8427;
+  color:white;
+  border:none;
+  border-radius: 3px;
+  font-size: medium;
+}
+
 #propertyDiv{
   margin-left: 5%;
   margin-top: 1vh;
@@ -424,12 +439,13 @@ background-color:white;
 #deleteButton:hover,
 #edit:hover,
 #workspaceButton:hover,
-#editDiv button:hover
+#editDiv button:hover,.logout button:hover
 {
   background-color: #ffffff;
   color:black;
   border: 2px solid black;
-}
+} 
+
 
 #add:active
 #workspaceDataDiv #deleteWorkspace:active,

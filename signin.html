@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
+    <title>Sign In</title>
     <script src="https://kit.fontawesome.com/b4df3df2da.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="signup.css">
@@ -11,23 +11,18 @@
 <body>
     <div class="container">
         <div class="formcontainer" id="formcontainer">
-            <h1 id="title">Sign Up</h1>
-            <form >
+            <h1 id="title">Sign In</h1>
+    <form>
                 <div class="form" id="form">
-        <div class="inputField" id="nameField">
-  
-                  <i class="fa-solid fa-user" id="symbol"></i>
-            <input type="text" placeholder="Name" required id="name" title="Name should be longer than 4 characters" name="name">
-        </div>
+        
         <div class="inputField">
             <i class="fa-solid fa-envelope"></i>
-            <input type="email" placeholder="Email" required id="email" title="Make sure this is a relevant email" name="email">
-
+            <input type="email" placeholder="Email" required id="email" title="Make sure this is a relevant email">
         </div>
         <div class="email error"></div>
         <div class="inputField">
             <i class="fa-solid fa-lock"></i>
-            <input type="password" placeholder="Password" required id="password" title="Password should be longer than 4 characters" name="password">
+            <input type="password" placeholder="Password" required id="password" title="Password should be longer than 4 characters">
         </div>
         <div class="password error"></div>
         <div class="role" id="role">
@@ -36,14 +31,14 @@
             <label for="owner"> As Owner</label>
             <input type="radio" id="owner" name="role" value="owner">
         </div>
-
+        <div class="role error"></div>
 
     </div>
     <div class="buttons">
          <a href="" id="link"><button type="button" id="signIn">Sign In</button></a> 
      </div>
 
-     <p id="account">Already have an account? <a href="/signin.html" id="signInLink">Sign In!</a></p>
+     <p id="noAccount">Don't have an account? <a href="/signup.html" id="signInLink">Sign Up!</a></p>
 </form>
 
    
@@ -51,6 +46,6 @@
 
 </div>
 
-    <script src="signup.js"></script>
+    <script src="signin.js"></script>
 </body>
 </html>

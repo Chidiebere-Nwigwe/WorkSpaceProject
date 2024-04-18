@@ -12,22 +12,24 @@
     <div class="container">
      <div class="navbar">
         <!-- <img src="buter.jpg" class="house"> -->
+        <!-- <a href="http://localhost:7000/coworker">Coworker</a> -->
          <nav>
             <ul>
-                <li><a href="headpage.html">Owner</a></li>
-                <li><a href="coworker.html">Coworker</a></li>
-                <li><a href="signup.html">Sign Up/ Sign In</a></li>
+                <li><a href="http://localhost:7000/owner">Owner</a></li>
+                <li><a href="http://localhost:7000/coworker">Coworker</a></li>
+                <li><a href="/signin.html">Sign In</a></li>
+                <li><a href="/signup.html" class="btn">Sign Up</a></li>
             </ul>
          </nav>
-         
+         -
      </div>
 
      <div class="row">
         <div class="col">
-            <div class="first">
-                <h1>Coworking WorkSpace Project</h1>
+            <div class="first" id="first">
+                <h1>Coral Spaces and Properties</h1>
                 <p>We are located in  Calgary, Alberta.</p>
-                <a href="signup.html"><button type="button"> Log In</button></a> 
+                <a href="signin.html"><button type="button"> Log In</button></a> 
             </div>
 
             <div class="col">
@@ -58,5 +60,14 @@
      </div>
     </div>
 
+    <script>
+        if(user){
+            let first = document.getElementById("first");
+            console.log(first)
+            first.innerHTML ="helllll";
+
+        }
+    </script>
 </body>
+
 </html>

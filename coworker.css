@@ -340,10 +340,24 @@ footer {
   cursor: pointer;
   transition: background 0.5s;
 }
-.navbarContent button:hover{
+.navbarContent button:hover, .menu-icons a button:hover{
   background: transparent;
   border: 2px solid #fff;
   
+}
+
+.menu-icons a button{
+  width: 200px;
+  padding: 15px 0;
+  text-align: center;
+  margin: 0 10px;
+  border-radius: 25px;
+  font-weight: bold;
+  border: 2px solid #fe7250;
+  background: #fe7250;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.5s;
 }
 
 
